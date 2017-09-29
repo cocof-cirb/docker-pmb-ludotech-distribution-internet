@@ -38,6 +38,13 @@ Si vos ludothécaires veulent tester le logiciel, mieux vaut utiliser le nom (dn
 
 L'alternative consiste à modifier le paramètre PMB appellé "base_url" via le menu "Administration" > "Outils" > "Paramètres". Celui-ci inclus le nom et le port par lequel l'application est contactée par le browser. Après changement de ce paramètre, il faut réimporter les documents numériques et les vignettes pour que la nouvelle URL prenne effet.
 
+
+Pour tester le catalogue en ligne, visitez:
+    http://localhost:32888/pmb/opac_css/
+ou
+    http://docker:32888/pmb/opac_css/
+
+
 ## Contenu
 L'image de base est Ubuntu à laquelle sont rajoutés: 
 * apache
