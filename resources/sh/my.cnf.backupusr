@@ -1,0 +1,7 @@
+[mysql]
+user=backupusr
+password=backupusrpwd
+
+[mysqldump]
+user=backupusr
+password=backupusrpwd

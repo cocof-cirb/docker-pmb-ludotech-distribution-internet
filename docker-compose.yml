@@ -1,0 +1,18 @@
+version: '3'
+services:
+  pmb:
+    build: .
+### Attention: si vous changez le numéro de port exposé à l'extérieur du docker
+### 	       vous devez également changer le paramètre 'url_base' dans la section
+###	       'opac' des paramètres de la base.
+###
+###	       Par défaut, il est à 'http://localhost:32888/pmb/opac_css' mais
+###	       il est peut-être souhaitable de le mettre sur 
+###	       'http//mondockerhost:32888/pmb/opac_css' pour que les vignettes
+###	       fonctionnent ailleurs que le sur le host docker.
+###
+###            Voir ici  http://docker:32888/pmb/admin.php?categ=param&action=modif&id_param=201
+    ports:
+     - "32888:80"
+
+
