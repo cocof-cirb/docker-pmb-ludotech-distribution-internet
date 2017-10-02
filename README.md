@@ -4,7 +4,7 @@
 Ce répository contient l'ensemble des fichiers nécessaires à la mise en place d'un serveur LAMP pour le logiciel
 [PMB ludoTECH](https://github.com/cocof-cirb/pmb_ludoTech).
 
-Parmis ces fichiers, il y a une base données minimale contenant 5 notices et 2 emprunteurs. 
+Parmi ces fichiers, il y a une base données minimale contenant 5 notices et 2 emprunteurs. 
 
 
 _Attention_: 
