@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:14.04
 
 ### Caution, the following must be match with the settings in PHP files pmb/includes/db_param.inc.php
 ENV MYSQL_PASS=ludo
@@ -52,7 +52,7 @@ RUN sed -i 's/^upload_max_filesize.*/upload_max_filesize = 30M/g' /etc/php5/apac
 ##############################################################################################################
 ### Work from github with detached HEAD for the tag 'PMB_LUDO_4.2'
 RUN mkdir -p ${HTML_D} \
-    && git clone --branch 'PMB_LUDO_4.2' https://github.com/cocof-cirb/pmb_ludoTech/ ${HTML_D}/ \
+    && git clone --branch 'master' https://github.com/cocof-cirb/pmb_ludoTech/ ${HTML_D}/ \
     ## Remove built-in documentation (lighter docker image)
     && rm -fr ${HTML_D}/pmb/doc \
     && chown -R www-data:www-data ${HTML_D}
@@ -94,8 +94,7 @@ RUN /etc/init.d/mysql start \
 
 # Setup Backup source and target
 RUN mkdir -p /srv/backup/files/srv/data \
-   && mkdir -p /srv/backup/mysql \
-
+   && mkdir -p /srv/backup/mysql  \
    # Don't forget to do that or you will lose some hairs :-)
    && touch /etc/cron.d/ludo-backups 
 
